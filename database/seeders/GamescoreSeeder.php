@@ -17,9 +17,9 @@ class GamescoreSeeder extends Seeder
     {
         DB::table('gamescores')->insert([
             'user01_id' => '1',
-            'user02_id' => '3',
-            'user03_id' => '4',
-            'user04_id' => '5',
+            'user02_id' => '2',
+            'user03_id' => '3',
+            'user04_id' => '4',
             'groupscore_id' => '1',
             'gamescore01' => '50',
             'gamescore02' => '25',

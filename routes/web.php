@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LogController;
+use App\Http\Controllers\GamescoreController;
+use App\Http\Controllers\GrouptotalscoreController;
+use App\Http\Controllers\GroupscoreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +31,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/logs', [LogController::class, 'index']);
+Route::get('/logs', [GrouptotalscoreController::class, 'grouptotalscoreindex']);
 
-Route::get('/logs/{gamescores}', [LogController::class ,'show']);
+Route::get('/logs/{groupscore}', [GroupscoreController::class ,'groupscoreindex']);
+
+// Route::get('/logs', [GamescoreController::class, 'index']);
+
+// Route::get('/logs/{gamescore}', [GamescoreController::class ,'show']);
+
+// Route::get('/logs', [LogController::class, 'usersshow']);
+
+// Route::get('/logs/usercreate', [LogController::class, 'userscreate']);
+
+// Route::post('/logs', [LogController::class, 'usersstore']);
 
 require __DIR__.'/auth.php';
