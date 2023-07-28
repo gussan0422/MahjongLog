@@ -17,13 +17,24 @@ class GroupscoresSeeder extends Seeder
     {
         DB::table('groupscores')->insert([
             'user01_id' => '1',
-            'user02_id' => '3',
-            'user03_id' => '4',
-            'user04_id' => '5',
-            'sumgamescore01' => '0',
-            'sumgamescore02' => '0',
-            'sumgamescore03' => '0',
-            'sumgamescore04' => '0',
+            'user02_id' => '2',
+            'user03_id' => '3',
+            'user04_id' => '4',
+            'sumgamescore01' => '10',
+            'sumgamescore02' => '-10',
+            'sumgamescore03' => '20',
+            'sumgamescore04' => '-20',
+        ]);
+        
+        DB::table('groupscores')->insert([
+            'user01_id' => '1',
+            'user02_id' => '2',
+            'user03_id' => '3',
+            'user04_id' => '4',
+            'sumgamescore01' => '50',
+            'sumgamescore02' => '-50',
+            'sumgamescore03' => '15',
+            'sumgamescore04' => '-15',
         ]);
     }
 }
