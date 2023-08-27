@@ -33,11 +33,13 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/logs', [GrouptotalscoreController::class, 'grouptotalscoreindex']);
 
-Route::get('/logs/{groupscore}', [GroupscoreController::class ,'groupscoreindex']);
+// Route::get('/logs/{groupscore}', [GroupscoreController::class ,'groupscoreindex','create']);
+
+Route::post('/logs/{groupscore}', [GroupscoreController::class, 'store']);
 
 // Route::get('/logs', [GamescoreController::class, 'index']);
 
-// Route::get('/logs/{gamescore}', [GamescoreController::class ,'show']);
+Route::get('/logs/{groupscore}', [GroupscoreController::class ,'show']);
 
 // Route::get('/logs', [LogController::class, 'usersshow']);
 
