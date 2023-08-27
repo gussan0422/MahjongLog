@@ -10,10 +10,15 @@ class Gamescore extends Model
     use HasFactory;
     
     protected $fillable = [
-        'user01',
-        'user02',
-        'user03',
-        'user04',
+        'user01_id',
+        'user02_id',
+        'user03_id',
+        'user04_id',
+        'gamescore01',
+        'gamescore02',
+        'gamescore03',
+        'gamescore04',
+        'groupscore_id'
     ];
     
     public function getBylimit(int $limit_count = 10)
